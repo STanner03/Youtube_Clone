@@ -5,6 +5,6 @@ from comments.models import Comment
 # Create your models here.
 
 class Reply(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)

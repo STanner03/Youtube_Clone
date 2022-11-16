@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.add_user_comments),
     path('<str:video_id>/', views.get_all_comments),
     path('<int:pk>/update/', views.update_user_comment),
-    path('<int:pk>/replies/', include('replies.urls')),
+    path('<int:commentpk>/replies/', include('replies.urls')),
 ]
