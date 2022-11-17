@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 
-const VideoPage = ({}) => {
-    return ( <div></div> );
+const VideoPage = ({selectedVideo}) => {
+    return ( <div>{selectedVideo}</div> );
 }
  
 export default VideoPage;
