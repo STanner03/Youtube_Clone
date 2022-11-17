@@ -1,4 +1,6 @@
-const VideoCard = ({}) => {
+const VideoCard = ({results}) => {
+
+
     return ( <div></div> );
 }
  

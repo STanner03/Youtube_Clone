@@ -3,14 +3,14 @@ import './SearchBar.css'
 
 
 
-const SearchBar = ({setSelectedVideo}) => {
+const SearchBar = ({setSearchWord}) => {
 
     const [criteria, setCriteria] = useState('')
     const handleChange = e => setCriteria(e.target.value)
 
     function handleSubmit(e) {
         e.preventDefault();
-        setSelectedVideo(criteria)
+        setSearchWord(criteria)
     }
 
     return (

@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
+const VideoPage = ({ results }) => {
+  return (
+    <div>
+      <VideoCard results={results} />
+      <VideoPlayer />
+    </div>
+  );
+};
 
-const VideoPage = ({selectedVideo}) => {
-    return ( <div>{selectedVideo}</div> );
-}
- 
 export default VideoPage;
