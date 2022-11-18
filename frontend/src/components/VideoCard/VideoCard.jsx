@@ -10,7 +10,7 @@ const VideoCard = ({ result }) => {
       <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={ytImage} />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>{result.snippet.title}</Card.Title>
         </Card.Body>
       </Card>
     </div>

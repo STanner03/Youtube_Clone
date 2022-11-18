@@ -10,7 +10,7 @@ import './HomePage.css'
 
 const HomePage = () => {
 
-  const [searchWord, setSearchWord] = useState('Learn How to code')
+  const [searchWord, setSearchWord] = useState('Full-Stack Coding')
   const [results, setResults] = useState([])
 
 
@@ -19,13 +19,10 @@ const HomePage = () => {
   }, [searchWord]);
 
   async function fetchSearchResults() {
-    let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?maxResults=6&q=${searchWord}&key=${YOUTUBE_API_KEY}`);
+    let response = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${searchWord}&key=${YOUTUBE_API_KEY}`);
     setResults(response.data.items)
     console.log(response.data.items)
-
   }
-
-  // https://www.googleapis.com/youtube/v3/search?q=Java&key=AIzaSyCzgbCFfUaToBLc9AWoOqLWPeMmeDy1q_0
 
   return (
     <div>
