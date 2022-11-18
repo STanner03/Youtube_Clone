@@ -14,8 +14,10 @@ import Footer from "./components/Footer/Footer";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 import VideoPage from "./pages/VideoPage/VideoPage";
+import { useState } from "react";
 
 function App() {
+  const [videoInfo, setVideoInfo] = useState({})
   return (
     <div>
       <Navbar />
@@ -28,8 +30,8 @@ function App() {
             </PrivateRoute>
           }
         /> */}
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/video" element={<VideoPage/>}/>
+        <Route path="/" element={<HomePage setVideoInfo={setVideoInfo} />}/>
+        <Route path="/video" element={<VideoPage videoInfo={videoInfo} />}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>

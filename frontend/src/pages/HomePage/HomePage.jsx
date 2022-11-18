@@ -8,9 +8,9 @@ import { YOUTUBE_API_KEY } from "../../utils/API_KEYS";
 import { useParams, useNavigate } from "react-router-dom";
 import './HomePage.css'
 
-const HomePage = () => {
+const HomePage = ({setVideoInfo}) => {
 
-  const [searchWord, setSearchWord] = useState('Full-Stack Coding')
+  const [searchWord, setSearchWord] = useState('learn software development')
   const [results, setResults] = useState([])
 
 
@@ -29,7 +29,7 @@ const HomePage = () => {
       <SearchBar setSearchWord={setSearchWord}/>
       <div className="card-spacing">
         {results.map((result, index) => {
-          return (<VideoCard result={result} key={index}/>);
+          return (<VideoCard result={result} key={index} setVideoInfo={setVideoInfo} />);
         })}
       </div>
     </div>
