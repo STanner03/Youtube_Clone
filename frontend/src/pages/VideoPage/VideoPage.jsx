@@ -4,7 +4,7 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 const VideoPage = ({ results }) => {
   return (
     <div>
-      <VideoCard results={results} />
+      {/* <VideoCard results={results} /> */}
       <VideoPlayer />
     </div>
   );
