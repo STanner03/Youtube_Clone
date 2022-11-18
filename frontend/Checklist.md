@@ -13,8 +13,13 @@ When comments are added to the backend for a specific video, I want to make a GE
 
 
 1) Create Video Card
-    1a) Show Video Image - DONE
-    1b) Show Video Title - DONE
+    <!-- 1a) Show Video Image - DONE -->
+    <!-- 1b) Show Video Title - DONE -->
+    <!-- 1c) OnClick handler -->
+    1d) Send video id to video player via click
 
 2) Create onClick to navigate from Video Card to Video Page and play selected Video
 
+3) Create single I-Frame for Video player 
+
+4) Related Videos
