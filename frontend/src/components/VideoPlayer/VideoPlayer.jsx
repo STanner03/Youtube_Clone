@@ -10,7 +10,7 @@ const VideoPlayer = ({ videoInfo }) => {
         width="1100"
         height="550"
         src={`https://www.youtube.com/embed/${videoInfo.id.videoId}?autoplay=1`}
-        frameborder="0"
+        frameBorder="0"
       ></iframe>
     </div>
   );

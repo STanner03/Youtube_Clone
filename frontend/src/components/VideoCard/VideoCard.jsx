@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
-const VideoCard = ({ result, setVideoInfo }) => {
+const VideoCard = ({ result, setVideoInfo, fetchRelatedVideos }) => {
   const ytImage = `https://img.youtube.com/vi/${result.id.videoId}/hqdefault.jpg`;
 
   let navigate = useNavigate();
@@ -10,10 +10,11 @@ const VideoCard = ({ result, setVideoInfo }) => {
     event.preventDefault();
     navigate("../video", { replace: true });
     setVideoInfo(result)
+    fetchRelatedVideos()
   }
 
   return (
-    <div onClick={handleSelection}>
+    <div className="video-card" onClick={handleSelection}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={ytImage} />
         <Card.Body>

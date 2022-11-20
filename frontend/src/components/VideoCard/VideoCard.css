@@ -1,0 +1,7 @@
+.video-card {
+    padding: auto;
+}
+
+.video-card:hover {
+    cursor: pointer;
+}

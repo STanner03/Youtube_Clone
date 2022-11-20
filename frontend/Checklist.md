@@ -20,6 +20,8 @@ When comments are added to the backend for a specific video, I want to make a GE
 
 <!-- 2) Create onClick to navigate from Video Card to Video Page and play selected Video -->
 
-3) Create single I-Frame for Video player 
+<!-- 3) Create single I-Frame for Video player  -->
 
 4) Related Videos
+
+5) Might have to lift VideoCard.jsx up to App.jsx and store all cards into a variable to access each card via index on the page it is to be displayed. Instead of having it be called twice in two separate files... I'm not sure... It's late and my head is foggy...

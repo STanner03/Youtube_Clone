@@ -18,6 +18,8 @@ import { useState } from "react";
 
 function App() {
   const [videoInfo, setVideoInfo] = useState({})
+  const [results, setResults] = useState([]);
+
   return (
     <div>
       <Navbar />
@@ -30,8 +32,8 @@ function App() {
             </PrivateRoute>
           }
         /> */}
-        <Route path="/" element={<HomePage setVideoInfo={setVideoInfo} />}/>
-        <Route path="/video" element={<VideoPage videoInfo={videoInfo} />}/>
+        <Route path="/" element={<HomePage results={results} setResults={setResults} setVideoInfo={setVideoInfo} />}/>
+        <Route path="/video" element={<VideoPage results={results} setResults={setResults} setVideoInfo={setVideoInfo} videoInfo={videoInfo} />}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
