@@ -1,16 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import useAuth from "../../hooks/useAuth";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from "axios";
 import VideoCard from "../../components/VideoCard/VideoCard";
 import { YOUTUBE_API_KEY } from "../../utils/API_KEYS";
-import { useParams, useNavigate } from "react-router-dom";
 import "./HomePage.css";
 
 const HomePage = ({ results, setResults, setVideoInfo }) => {
   const [searchWord, setSearchWord] = useState("learn to code");
-  // const [results, setResults] = useState([]);
 
   useEffect(() => {
     fetchSearchResults();
