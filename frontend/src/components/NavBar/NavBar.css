@@ -9,7 +9,8 @@ li {
 }
 
 .navBar {
-  background: steelblue;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(207,22,22,1) 49%, rgba(85,0,255,1) 100%);
   box-shadow: 4px 2px 5px gray;
   color: white;
   margin-bottom: 2rem;
@@ -32,4 +33,21 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+}
+
+.img {
+  width: 2%;
+  height: auto;
+}
+
+.navbar-buttons {
+  display: flex;
+}
+
+.login-button {
+  margin: 5px;
+}
+
+.register-button {
+  margin: 5px;
 }

@@ -14,8 +14,8 @@ const SearchBar = ({setSearchWord}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input className="search-bar" type='text' placeholder="Search here..." value={criteria} onChange={handleChange}/>
+        <form className='search-bar' onSubmit={handleSubmit}>
+            <input className="text-bar" type='text' placeholder="Search here..." value={criteria} onChange={handleChange} />
             <button className="search-button">Search</button>
         </form>
           );

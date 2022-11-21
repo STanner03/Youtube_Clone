@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
+import dCCLogo from '../../Assets/dCC_Transparent_White.png'
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
@@ -12,16 +13,19 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
+            <b><img src={dCCLogo}
+                alt='dCC Logo' 
+                className="img">
+                </img>S&A YouTube Clone</b>
           </Link>
         </li>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
           ) : (
-            <div>
-              <button onClick={() => navigate("/login")}>Login</button>
-              <button onClick={() => navigate("/register")}>Regiser</button>
+            <div className="navbar-buttons">
+              <button className="login-button" onClick={() => navigate("/login")}>Login</button>
+              <button className="register-button" onClick={() => navigate("/register")}>Regiser</button>
             </div>
           )}
         </li>
