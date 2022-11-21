@@ -1,9 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
 
-const CommentForm = ({videoInfo, token, showAllComments}) => {
-    // const navigate = useNavigate()
+const CommentForm = ({videoInfo, token, fetchCommentsForVideo}) => {
 
     const [commentBody, setCommentBody] = useState('')
 
@@ -21,9 +19,8 @@ const CommentForm = ({videoInfo, token, showAllComments}) => {
             }
         });
         if(response.status === 201) {
-            showAllComments();
+            await fetchCommentsForVideo()
         }
-        // navigate("/videopage")
         } catch (error) {
             console.log(error.message)
         }
