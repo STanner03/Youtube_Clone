@@ -5,14 +5,14 @@ import axios from "axios";
 const CommentForm = ({videoInfo, token, showAllComments}) => {
     // const navigate = useNavigate()
 
-    const [comment, setComment] = useState('')
+    const [commentBody, setCommentBody] = useState('')
 
-    const handleComment = e => setComment(e.target.value)
+    const handleComment = e => setCommentBody(e.target.value)
 
     async function postComment() {
         const newComment = {
             video_id: videoInfo.id.videoId,
-            text: comment,
+            text: commentBody,
         };
         try {
         let response = await axios.post("http://127.0.0.1:8000/api/comments/", newComment, {
@@ -28,17 +28,11 @@ const CommentForm = ({videoInfo, token, showAllComments}) => {
             console.log(error.message)
         }
     }
-
     const handleSubmit = e => {
         e.preventDefault();
         postComment();
-        setComment('')
+        setCommentBody('')
     }
-
-
-
-
-
 
     return ( 
         <form onSubmit={handleSubmit}>
@@ -46,7 +40,7 @@ const CommentForm = ({videoInfo, token, showAllComments}) => {
                 <label> Comment: </label>
             </div>
             <div>
-                <textarea placeholder="Write Comment Here..." value={comment} onChange={handleComment}/>
+                <textarea placeholder="Write Comment Here..." value={commentBody} onChange={handleComment}/>
             </div>
             <div>
                 <button type="submit"> Post Comment </button>

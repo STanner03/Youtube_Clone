@@ -1,4 +1,4 @@
-const Comment = ({}) => {
+const Comment = ({user, comments}) => {
     return ( <div></div> );
 }
  

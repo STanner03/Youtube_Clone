@@ -18,7 +18,6 @@ const RelatedVideos = ({ setVideoInfo, videoInfo }) => {
       `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&relatedToVideoId=${videoInfo.id.videoId}&type=video&key=${YOUTUBE_API_KEY}`
     );
     setRelatedVideos(response.data.items);
-    console.log(response.data.items);
   }
 
 

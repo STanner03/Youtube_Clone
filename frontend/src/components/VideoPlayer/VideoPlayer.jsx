@@ -1,9 +1,10 @@
 import { useState } from "react";
+import './VideoPlayer.css'
 
 const VideoPlayer = ({ videoInfo }) => {
 
   return (
-    <div>
+    <div className="video-playback">
       <iframe
         id="ytplayer"
         type="text/html"

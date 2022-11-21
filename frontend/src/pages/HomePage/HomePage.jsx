@@ -18,7 +18,6 @@ const HomePage = ({ results, setResults, setVideoInfo }) => {
       `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${searchWord}&key=${YOUTUBE_API_KEY}`
     );
     setResults(response.data.items);
-    console.log(response.data.items);
   }
 
   return (

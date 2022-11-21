@@ -6,4 +6,5 @@
 .video-container {
     margin-left: 7.5%;
     border: none;
+    float: left;
 }

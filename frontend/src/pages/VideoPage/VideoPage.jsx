@@ -9,7 +9,6 @@ const VideoPage = ({ setVideoInfo, videoInfo }) => {
 
   const [user, token] = useAuth()
 
-  console.log(videoInfo)
 
   return (
     <div>
@@ -23,7 +22,7 @@ const VideoPage = ({ setVideoInfo, videoInfo }) => {
         </Card>
       </div>
       <div>
-        <CommentList videoInfo={videoInfo} token={token} />
+        <CommentList videoInfo={videoInfo} token={token} user={user}/>
       </div>
       <div><RelatedVideos setVideoInfo={setVideoInfo} videoInfo={videoInfo} /></div>
     </div>
