@@ -1,7 +1,6 @@
-import './VideoPlayer.css'
+import "./VideoPlayer.css";
 
 const VideoPlayer = ({ videoInfo }) => {
-
   return (
     <div className="video-playback">
       <iframe

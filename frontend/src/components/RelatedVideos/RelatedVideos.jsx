@@ -3,13 +3,10 @@ import { useState, useEffect } from "react";
 import { YOUTUBE_API_KEY } from "../../utils/API_KEYS";
 import axios from "axios";
 
-
-
 const RelatedVideos = ({ setVideoInfo, videoInfo }) => {
-
   const [relatedVideos, setRelatedVideos] = useState([]);
 
-  useEffect (() => {
+  useEffect(() => {
     fetchRelatedVideos();
   }, [videoInfo]);
 
@@ -20,17 +17,11 @@ const RelatedVideos = ({ setVideoInfo, videoInfo }) => {
     setRelatedVideos(response.data.items);
   }
 
-
-
   return (
     <div>
       {relatedVideos.map((result, index) => {
         return (
-          <VideoCard
-            result={result}
-            key={index}
-            setVideoInfo={setVideoInfo}
-          />
+          <VideoCard result={result} key={index} setVideoInfo={setVideoInfo} />
         );
       })}
     </div>

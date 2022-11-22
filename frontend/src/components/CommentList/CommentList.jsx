@@ -3,7 +3,6 @@ import Comment from "./Comment/Comment";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import './CommentList.css'
 
 const CommentList = ({ videoInfo, token, user }) => {
   const [comments, setComments] = useState([]);
@@ -24,15 +23,15 @@ const CommentList = ({ videoInfo, token, user }) => {
     <div>
       <div>
         {user ? (
-        <CommentForm
-          videoInfo={videoInfo}
-          token={token}
-          fetchCommentsForVideo={fetchCommentsForVideo}
-        />
+          <CommentForm
+            videoInfo={videoInfo}
+            token={token}
+            fetchCommentsForVideo={fetchCommentsForVideo}
+          />
         ) : (
-            <div>
-                <Link to="/login">Login to post comments...</Link>
-            </div>
+          <div>
+            <Link to="/login">Login to post comments...</Link>
+          </div>
         )}
       </div>
       <div>

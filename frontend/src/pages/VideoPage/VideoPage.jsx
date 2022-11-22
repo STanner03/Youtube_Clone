@@ -6,14 +6,11 @@ import useAuth from "../../hooks/useAuth";
 import CommentList from "../../components/CommentList/CommentList";
 
 const VideoPage = ({ setVideoInfo, videoInfo }) => {
-
-  const [user, token] = useAuth()
-
+  const [user, token] = useAuth();
 
   return (
     <div className="video-page">
       <div className="video-content">
-      {/* <div> */}
         <Card className="video-container">
           <VideoPlayer videoInfo={videoInfo} />
           <Card.Body className="video-info">
@@ -21,10 +18,11 @@ const VideoPage = ({ setVideoInfo, videoInfo }) => {
             <Card.Text> {videoInfo.snippet.description}</Card.Text>
           </Card.Body>
         </Card>
-      {/* </div> */}
-        <CommentList videoInfo={videoInfo} token={token} user={user}/>
+        <CommentList videoInfo={videoInfo} token={token} user={user} />
       </div>
-      <div className="related-videos"><RelatedVideos setVideoInfo={setVideoInfo} videoInfo={videoInfo} /></div>
+      <div className="related-videos">
+        <RelatedVideos setVideoInfo={setVideoInfo} videoInfo={videoInfo} />
+      </div>
     </div>
   );
 };
