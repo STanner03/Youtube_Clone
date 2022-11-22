@@ -8,8 +8,8 @@
 <!-- (5 points) As a user, I want to see the title and description of the currently playing video.  -->
 <!-- (5 points) As a user, I want to see a grouping of videos related to my selected video. (API CALL #2)  -->
 <!-- (5 points) As a user, I want to be able to select a video to be played from the list of related videos to my search.  -->
-(7.5 points) As a registered user, I want to add a comment to a video in the comment section (Using Axios to make POST requests to my backend API). 
-When comments are added to the backend for a specific video, I want to make a GET request every time that video is loaded as the currently playing video and see all comments for that video.
+<!-- (7.5 points) As a registered user, I want to add a comment to a video in the comment section (Using Axios to make POST requests to my backend API).  -->
+<!-- When comments are added to the backend for a specific video, I want to make a GET request every time that video is loaded as the currently playing video and see all comments for that video. -->
 
 
 <!-- 1) Create Video Card 
@@ -24,9 +24,9 @@ When comments are added to the backend for a specific video, I want to make a GE
 
 <!-- 4) Related Videos -->
 
-5) Create CommentList
+<!-- 5) Create CommentList
     a) Create comment Post form.
         1. Authenticate Comment Post with login token.
         2. Show comment post form under selected video description.
     b) Render/ show comments under post form on video page.
-        1. 
+        1.  -->

@@ -1,8 +1,11 @@
 .card-spacing {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
 }
 
-.card-spacing:hover {
+/* .card-spacing:hover {
     cursor: pointer;
-}
+} */

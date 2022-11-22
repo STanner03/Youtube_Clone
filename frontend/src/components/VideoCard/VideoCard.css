@@ -1,7 +1,8 @@
 .video-card {
-    padding: auto;
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
-/* .video-card:hover {
+.video-card:hover {
     cursor: pointer;
-} */
+}

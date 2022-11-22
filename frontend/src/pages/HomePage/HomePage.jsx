@@ -15,7 +15,7 @@ const HomePage = ({ results, setResults, setVideoInfo }) => {
 
   async function fetchSearchResults() {
     let response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${searchWord}&key=${YOUTUBE_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=${searchWord}&key=${YOUTUBE_API_KEY}`
     );
     setResults(response.data.items);
   }

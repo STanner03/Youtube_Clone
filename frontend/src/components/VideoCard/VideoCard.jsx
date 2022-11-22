@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
+import './VideoCard.css'
 
 const VideoCard = ({ result, setVideoInfo }) => {
   const ytImage = `https://img.youtube.com/vi/${result.id.videoId}/hqdefault.jpg`;
