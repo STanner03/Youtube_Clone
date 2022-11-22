@@ -11,8 +11,9 @@ const VideoPage = ({ setVideoInfo, videoInfo }) => {
 
 
   return (
-    <div>
-      <div>
+    <div className="video-page">
+      <div className="video-content">
+      {/* <div> */}
         <Card className="video-container">
           <VideoPlayer videoInfo={videoInfo} />
           <Card.Body className="video-info">
@@ -20,11 +21,10 @@ const VideoPage = ({ setVideoInfo, videoInfo }) => {
             <Card.Text> {videoInfo.snippet.description}</Card.Text>
           </Card.Body>
         </Card>
-      </div>
-      <div>
+      {/* </div> */}
         <CommentList videoInfo={videoInfo} token={token} user={user}/>
       </div>
-      <div><RelatedVideos setVideoInfo={setVideoInfo} videoInfo={videoInfo} /></div>
+      <div className="related-videos"><RelatedVideos setVideoInfo={setVideoInfo} videoInfo={videoInfo} /></div>
     </div>
   );
 };
