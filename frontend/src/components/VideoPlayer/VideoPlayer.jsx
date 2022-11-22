@@ -1,4 +1,3 @@
-import { useState } from "react";
 import './VideoPlayer.css'
 
 const VideoPlayer = ({ videoInfo }) => {
@@ -8,8 +7,8 @@ const VideoPlayer = ({ videoInfo }) => {
       <iframe
         id="ytplayer"
         type="text/html"
-        width="1100"
-        height="550"
+        width="1099"
+        height="570"
         src={`https://www.youtube.com/embed/${videoInfo.id.videoId}?autoplay=1`}
         frameBorder="0"
       ></iframe>

@@ -1,5 +1,5 @@
 .video-info {
-    width: 1100px;
+    width: 68.7em;
     padding: 0;
     margin-top: 15px
 }
@@ -14,6 +14,7 @@
     margin-right: 4%;
     border: none;
     float: left;
+    width: 68.7em;
 }
 
 .video-page {
@@ -21,6 +22,3 @@
     justify-content: space-around;
 }
 
-/* .related-videos {
-    display: flex;
-} */

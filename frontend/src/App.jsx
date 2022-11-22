@@ -12,7 +12,6 @@ import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 // Util Imports
-import PrivateRoute from "./utils/PrivateRoute";
 import VideoPage from "./pages/VideoPage/VideoPage";
 import { useState } from "react";
 
@@ -21,17 +20,9 @@ function App() {
   const [results, setResults] = useState([]);
 
   return (
-    <div>
+    <div className="main-bg">
       <Navbar />
       <Routes>
-        {/* <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <HomePage />
-            </PrivateRoute>
-          }
-        /> */}
         <Route path="/" element={<HomePage results={results} setResults={setResults} setVideoInfo={setVideoInfo} />}/>
         <Route path="/video" element={<VideoPage results={results} setResults={setResults} setVideoInfo={setVideoInfo} videoInfo={videoInfo} />}/>
         <Route path="/register" element={<RegisterPage />} />

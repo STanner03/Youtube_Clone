@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import './CommentForm.css'
 
 const CommentForm = ({videoInfo, token, fetchCommentsForVideo}) => {
 
@@ -32,15 +33,15 @@ const CommentForm = ({videoInfo, token, fetchCommentsForVideo}) => {
     }
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form className="comment-protected" onSubmit={handleSubmit}>
             <div>
-                <label> Comment: </label>
+                <label className="comment-label"> Comment: </label>
             </div>
             <div>
-                <textarea placeholder="Write Comment Here..." value={commentBody} onChange={handleComment}/>
+                <textarea className="comment-text" placeholder="Write Comment Here..." value={commentBody} onChange={handleComment}/>
             </div>
             <div>
-                <button type="submit"> Post Comment </button>
+                <button className="post-button" type="submit"> Post Comment </button>
             </div>
         </form>
      );

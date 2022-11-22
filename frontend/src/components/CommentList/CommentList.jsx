@@ -3,6 +3,7 @@ import Comment from "./Comment/Comment";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './CommentList.css'
 
 const CommentList = ({ videoInfo, token, user }) => {
   const [comments, setComments] = useState([]);
