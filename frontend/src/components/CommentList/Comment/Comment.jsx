@@ -1,10 +1,12 @@
+import "./Comment.css"
+
 const Comment = ({  comment }) => {
 
 
   return (
-    <div>
-      <div>{comment.user.username}</div>
-      <div>{comment.text}</div>
+    <div className="comment-box-style">
+      <h3 className="comment-username">{comment.user.username}</h3>
+      <div className="comment-body">{comment.text}</div>
     </div>
   );
 };
